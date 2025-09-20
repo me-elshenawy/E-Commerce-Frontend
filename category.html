@@ -10,12 +10,63 @@
 <body>
   <div id="header"></div>
 
-  <main class="container my-4">
-    <h2 class="mb-3">Category: Electronics</h2>
-    <div class="row" id="category-products">
-      <!-- Product Cards -->
-    </div>
-  </main>
+   <main class="container my-5">
+        <div class="row">
+            <!-- Filters Sidebar -->
+            <aside class="col-lg-3">
+                <h4>Filters</h4>
+                <hr>
+                <!-- Brand Filter -->
+                <div class="mb-4">
+                    <h5>Brand</h5>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="brand1"><label class="form-check-label" for="brand1">Brand A</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="brand2"><label class="form-check-label" for="brand2">Brand B</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="brand3"><label class="form-check-label" for="brand3">Brand C</label></div>
+                </div>
+                <!-- Price Filter -->
+                <div class="mb-4">
+                    <h5>Price Range</h5>
+                    <div class="d-flex align-items-center"><input type="number" class="form-control" placeholder="$ Min"> <span class="mx-2">-</span> <input type="number" class="form-control" placeholder="$ Max"></div>
+                </div>
+                <button class="btn btn-primary w-100">Apply Filters</button>
+            </aside>
+
+            <!-- Products Grid -->
+            <div class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="mb-0">Search Results</h2>
+                    <!-- Sorting Dropdown -->
+                    <div class="col-md-4">
+                        <select class="form-select">
+                            <option selected>Sort by</option>
+                            <option value="1">Price: Low to High</option>
+                            <option value="2">Price: High to Low</option>
+                            <option value="3">Newest Arrivals</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- TEAM LEAD: Product Card Component Usage (x12) -->
+                    <div class="col-lg-4 col-md-6 mb-4"><div class="card h-100 product-card"><img src="https://via.placeholder.com/200x200.png?text=Product+A" class="card-img-top"><div class="card-body d-flex flex-column"><h5 class="card-title">Product A</h5><p class="card-text fw-bold">$19.99</p><a href="product.html" class="btn btn-warning mt-auto">View Details</a></div></div></div>
+                    <div class="col-lg-4 col-md-6 mb-4"><div class="card h-100 product-card"><img src="https://via.placeholder.com/200x200.png?text=Product+B" class="card-img-top"><div class="card-body d-flex flex-column"><h5 class="card-title">Product B</h5><p class="card-text fw-bold">$29.99</p><a href="product.html" class="btn btn-warning mt-auto">View Details</a></div></div></div>
+                    <div class="col-lg-4 col-md-6 mb-4"><div class="card h-100 product-card"><img src="https://via.placeholder.com/200x200.png?text=Product+C" class="card-img-top"><div class="card-body d-flex flex-column"><h5 class="card-title">Product C</h5><p class="card-text fw-bold">$39.99</p><a href="product.html" class="btn btn-warning mt-auto">View Details</a></div></div></div>
+                    <div class="col-lg-4 col-md-6 mb-4"><div class="card h-100 product-card"><img src="https://via.placeholder.com/200x200.png?text=Product+D" class="card-img-top"><div class="card-body d-flex flex-column"><h5 class="card-title">Product D</h5><p class="card-text fw-bold">$49.99</p><a href="product.html" class="btn btn-warning mt-auto">View Details</a></div></div></div>
+                    <!-- ... repeat product cards ... -->
+                </div>
+                <!-- Pagination -->
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+    <!-- SALEH: Category Page Content END -->
 
   <div id="footer"></div>
 
