@@ -1,103 +1,116 @@
-# E-Commerce Frontend Application
+# Amazon Clone - E-commerce Frontend Project
 
-![Project Status](https://img.shields.io/badge/status-development-orange) <!-- You can change this to 'in-progress', 'completed', etc. -->
-![License](https://img.shields.io/badge/license-MIT-blue.svg) <!-- Or other license you choose -->
+A responsive and interactive e-commerce frontend project designed to replicate the core browsing and shopping cart experience of Amazon. This project is built using modern web technologies like HTML5, CSS3, Bootstrap 5, and JavaScript, focusing on a clean, modular, and dynamic user experience.
 
-## Table of Contents
+The application features multiple pages including a homepage, product category page, detailed product view, and a fully functional shopping cart that persists data using browser `localStorage`.
 
--   [About the Project](#about-the-project)
--   [Features](#features)
--   [Technologies Used](#technologies-used)
--   [Getting Started](#getting-started)
-    -   [Prerequisites](#prerequisites)
-    -   [Installation](#installation)
-    -   [Running the Application](#running-the-application)
--   [Usage](#usage)
--   [Backend Repository](#backend-repository)
--   [Screenshots / Demo](#screenshots--demo)
--   [Contributing](#contributing)
--   [License](#license)
--   [Contact](#contact)
+[//]: # (Replace this with a link to your live demo if you deploy it)
+**[Live Demo Here]**
 
----
+## Screenshots
 
-## About the Project
-
-This repository contains the frontend part of a full-stack e-commerce application. Developed as part of a Full Stack Web Development course, this project aims to replicate core functionalities of popular online marketplaces, providing a robust and intuitive user interface for browsing products, managing a shopping cart, and handling user authentication.
-
-The application is built with modern web technologies, focusing on creating a responsive and engaging user experience. It consumes data from a separate backend API to provide dynamic content and functionality.
+| Homepage | Category Page |
+| :---: | :---: |
+| *Your Screenshot of home.html* | *Your Screenshot of category.html* |
+| **Product Page** | **Shopping Cart** |
+| *Your Screenshot of product.html* | *Your Screenshot of cart.html* |
 
 ## Features
 
-Here are some of the key features implemented (or planned) for this frontend application:
-
--   **Product Listing:** Browse a wide range of products with pagination and filtering options.
--   **Product Detail Page:** View comprehensive information about individual products, including images, descriptions, prices, and reviews.
--   **Shopping Cart Management:** Add, update, and remove items from the shopping cart.
--   **User Authentication:** Secure user registration, login, and logout functionalities.
--   **User Profile:** View and manage user-specific information and order history.
--   **Search Functionality:** Quickly find products using a search bar.
--   **Responsive Design:** Optimized layout and functionality for various screen sizes (desktop, tablet, mobile).
--   **[ADD MORE SPECIFIC FEATURES HERE, e.g., Wishlist, Product Reviews, Checkout Process]**
+- **Responsive Design**: Fully responsive layout for seamless viewing on desktops, tablets, and mobile devices, thanks to the Bootstrap 5 grid system.
+- **Modular Components**: Dynamically loaded header and footer across all pages for easy maintenance and consistency.
+- **Homepage**: Features a dynamic carousel, promotional cards, and sections for deals and budget-friendly items.
+- **Category Page**:
+  - Displays a grid of products.
+  - Client-side filtering by brand and price range.
+  - Sorting options for relevance, price, rating, etc.
+- **Product Details Page**:
+  - Image gallery with main image and clickable thumbnails.
+  - Product title, description, rating, and pricing.
+  - Options to select quantity and color.
+- **Dynamic Shopping Cart**:
+  - **Add to Cart**: Add products from the category or product pages.
+  - **Persistent Storage**: The cart state is saved in the browser's `localStorage`, so items are not lost on page reload.
+  - **Manage Items**: Users can update the quantity of items or remove them completely.
+  - **Clear Cart**: Option to empty the entire cart with one click.
+  - **Live Summary**: The order summary (subtotal, shipping, tax, total) updates automatically as the cart changes.
+- **Interactive Modals**: Bootstrap modals are used for user confirmations like "Added to Cart", "Remove Item", and "Clear Cart".
 
 ## Technologies Used
 
-This project leverages the following technologies and libraries for its frontend development:
+- **HTML5**: For the structure and content of the web pages.
+- **CSS3**: For custom styling, animations, and layout enhancements.
+- **JavaScript (ES6)**: For all client-side logic, interactivity, and DOM manipulation.
+  - **CartManager Class**: An object-oriented approach to manage all shopping cart functionalities.
+  - **Local Storage API**: To persist cart data on the user's browser.
+- **Bootstrap 5**: The core CSS framework for layout, components (modals, carousel, navbar), and responsiveness.
+- **Font Awesome**: For scalable vector icons used throughout the application.
 
--   **[Your Frontend Framework/Library, e.g., React.js / Vue.js / Angular]**
--   **[State Management, e.g., Redux / Redux Toolkit / Vuex / NgRx]**
--   **[Styling Framework/Library, e.g., Tailwind CSS / Bootstrap / Material-UI / Styled Components]**
--   **[HTTP Client, e.g., Axios / Fetch API]**
--   **[Other important libraries, e.g., React Router / Vue Router, date formatting libraries, form handling libraries]**
--   **JavaScript (ES6+)**
--   **HTML5 & CSS3**
+## Project Structure
+
+```
+/
+|-- assets/
+|   |-- css/
+|   |   |-- bootstrap.min.css
+|   |   |-- style.css
+|   |   |-- home.css
+|   |   |-- category-style.css
+|   |
+|   |-- js/
+|       |-- bootstrap.bundle.min.js
+|       |-- script.js                 # Core cart and product logic
+|       |-- main.js                   # Component loading logic
+|
+|-- components/
+|   |-- header.html                 # Reusable header component
+|   |-- footer.html                 # Reusable footer component
+|
+|-- home.html                       # Main landing page
+|-- category.html                   # Product listing page
+|-- product.html                    # Single product detail page
+|-- cart.html                       # Shopping cart page
+|-- README.md                       # This file
+```
 
 ## Getting Started
 
-To get a local copy up and running, follow these simple steps.
-
-### Prerequisites
-
-Make sure you have the following installed on your machine:
-
--   Node.js (LTS version recommended)
--   npm (Node Package Manager) or Yarn
-    ```bash
-    # Check Node.js version
-    node -v
-    # Check npm version
-    npm -v
-    # (Optional) Check Yarn version
-    yarn -v
-    ```
+This is a pure front-end project and requires no special build steps or server environment to run.
 
 ### Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/me-elshenawy/E-Commerce-Frontend.git
-    cd E-Commerce-Frontend
+1.  Clone the repository to your local machine:
+    ```sh
+    git clone https://your-repository-url.git
     ```
-2.  **Install NPM packages:**
-    ```bash
-    npm install
-    # OR if using Yarn
-    yarn install
+2.  Navigate into the project directory:
+    ```sh
+    cd amazon-clone-project
     ```
-3.  **Configure Environment Variables:**
-    Create a `.env` file in the root of the project.
-    ```
-    REACT_APP_API_BASE_URL=[YOUR_BACKEND_API_URL]
-    # Example: REACT_APP_API_BASE_URL=http://localhost:5000/api
-    # [FILL IN / EDIT: Add any other environment variables your frontend needs]
-    ```
-    **Note:** This frontend application requires a running backend API. Please refer to the [Backend Repository](#backend-repository) section for instructions on setting up the backend.
 
-### Running the Application
+### Running the Project
 
-To run the application in development mode:
+Simply open the `home.html` file in your preferred web browser.
 
-```bash
-npm start
-# OR if using Yarn
-yarn start
+```
+# On Windows
+start home.html
+
+# On macOS
+open home.html
+
+# On Linux
+xdg-open home.html
+```
+
+You can then navigate through the website as you would with any live site.
+
+## How It Works
+
+- **Component Loading**: The `assets/js/main.js` script contains a function that uses the `fetch()` API to dynamically load the content of `components/header.html` and `components/footer.html` into the respective `<header>` and `<footer>` tags on each page. This ensures a single source of truth for these repeating elements.
+
+- **Cart Management**: The `assets/js/script.js` file initializes a `CartManager` class. This class handles all cart operations:
+  - When the page loads, it checks `localStorage` for any existing cart data.
+  - When a user adds an item, the `addToCart` method updates the cart array and saves it back to `localStorage`.
+  - The cart count in the header is updated whenever the cart changes.
+  - On the `cart.html` page, the `renderCartItems` method dynamically generates the HTML for each item in the cart and calculates the order summary.
