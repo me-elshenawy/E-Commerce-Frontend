@@ -35,8 +35,6 @@ body {
 .cards-overlay {
  margin-top: 180px;
   position: absolute;
- 
-  
   top: 25%; 
   left: 50%;
   transform: translateX(-50%);
@@ -49,7 +47,10 @@ body {
    pointer-events: none;
 }
 
-/* Promo card style */
+.cards-overlay a {
+  pointer-events: auto;
+}
+
 .promo-card {
    background: #fff;
   padding: 15px;
@@ -215,3 +216,4 @@ body {
   color: #333;
   margin: 0;
 }
+
