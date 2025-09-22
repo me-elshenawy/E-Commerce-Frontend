@@ -1,4 +1,4 @@
-# Amazon Clone - E-commerce Frontend Project
+# Amazon - E-commerce Frontend Project
 
 A responsive and interactive e-commerce frontend project designed to replicate the core browsing and shopping cart experience of Amazon. This project is built using modern web technologies like HTML5, CSS3, Bootstrap 5, and JavaScript, focusing on a clean, modular, and dynamic user experience.
 
