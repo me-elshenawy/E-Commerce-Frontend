@@ -81,11 +81,11 @@ This is a pure front-end project and requires no special build steps or server e
 
 1.  Clone the repository to your local machine:
     ```sh
-    git clone https://your-repository-url.git
+    git clone https://github.com/me-elshenawy/E-Commerce-Frontend.git
     ```
 2.  Navigate into the project directory:
     ```sh
-    cd amazon-clone-project
+    cd E-Commerce-Frontendt
     ```
 
 ### Running the Project
